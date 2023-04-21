@@ -5,7 +5,7 @@
 package DAO;
 
 import Connect.DBConnection;
-import DTO.BaohiemDTO;
+import DTO.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -23,36 +23,40 @@ public class BaohiemDAO
     PreparedStatement stmt = null;
     ResultSet rs= null;
     
-    public static final int INDEX_LOAIBH = 0;
+    public static final String INDEX_LOAIBH = null;
     
     public BaohiemDAO()
     {
     }
     public static void main(String[] args) {
         BaohiemDAO baohiemDAO = new BaohiemDAO();
-        ArrayList<BaohiemDTO> baohiemList = baohiemDAO.getBaohiem();
-        for (BaohiemDTO pb : baohiemList)
+        ArrayList<BaoHiemDTO> baohiemList = baohiemDAO.getBaohiem();
+        for (BaoHiemDTO pb : baohiemList)
         {
-            System.out.println(pb.getMaBH()+ " "+  pb.getMaNv()+ " "+ pb.getLoaiBH()+ " "+ 
+            System.out.println(pb.getMaBH()+ " "+  pb.getMaNv()+ " "+pb.getTenNvbh()+ " "+ pb.getLoaiBH()+ " "+ 
                                 pb.getNgaycap()+ " "+ pb.getNgayhethan());
         }
-        
+        //" "+ pb.getTenNvbh()+
     }
-    public  ArrayList<BaohiemDTO> getBaohiem()
+    public  ArrayList<BaoHiemDTO> getBaohiem()
     {
         try {
             conn = DBConnection.getConnection();
-            stmt = conn.prepareStatement("Select * from BaoHiem");
-            ArrayList<BaohiemDTO> baohiemDAO = new ArrayList();
+            stmt = conn.prepareStatement("select b.MaBH,b.MaNv,n.TenNv, b.LoaiBH,b.NgayCap,b.NgayHetHan\n" +
+                        "from BaoHiem b\n" +
+                        "join Nhanvien n on b.MaNv = n.MaNv ");
+            ArrayList<BaoHiemDTO> baohiemDAO = new ArrayList();
             rs = stmt.executeQuery();
             
             while(rs.next())
             {
-                baohiemDAO.add(new BaohiemDTO( rs.getString("MaBH" ),
-                        rs.getString("MaNv" ),
-                        rs.getString("LoaiBH" ),
-                        rs.getDate("NgayCap" ),
-                        rs.getDate("NgayHetHan" )));        
+                baohiemDAO.add(new BaoHiemDTO
+                    ( rs.getString("MaBH" ),
+                    rs.getString("MaNv" ),
+                    rs.getString("TenNv"),
+                    rs.getString("LoaiBH" ),
+                    rs.getDate("NgayCap" ),
+                    rs.getDate("NgayHetHan" )));        
             }
             return baohiemDAO;
         } catch (SQLException e )
@@ -62,7 +66,7 @@ public class BaohiemDAO
             DBConnection.closeConnection(conn, stmt, rs);
         }
     }
-    public  boolean addBaohiem( BaohiemDTO baohiem)
+    public  boolean addBaohiem( BaoHiemDTO baohiem)
     {
         try {
             java.util.Date ngayCap = baohiem.getNgaycap();
@@ -74,12 +78,13 @@ public class BaohiemDAO
 
             
             conn = DBConnection.getConnection();
-            stmt = conn.prepareStatement(" Insert into Baohiem (MaBH, MaNv, LoaiBH, NgayCap, NgayHetHan )VALUES ( ? ,?,?,?,?)");
+            stmt = conn.prepareStatement("INSERT INTO Baohiem (MaBH, MaNv, LoaiBH, NgayCap, NgayHetHan) " +
+                              "VALUES (?, ?, ?, ?, ?)");
             stmt.setString(1, baohiem.getMaBH());
             stmt.setString(2, baohiem.getMaNv());
             stmt.setString(3, baohiem.getLoaiBH());
             stmt.setDate(4, sqlNgayCap);
-            stmt.setDate(5, sqlNgayhethan );
+            stmt.setDate(5, sqlNgayhethan);
             
             stmt.executeUpdate();
 
@@ -90,7 +95,7 @@ public class BaohiemDAO
             DBConnection.closeConnection(conn, stmt);
         }
     }
-//    public boolean updateBaohiem(BaohiemDTO baohiem)
+//    public boolean updateBaohiem(BaoHiemDTO baohiem)
 //    {
 //        try {
 //            Object[] selection = baohiem.getSelection();

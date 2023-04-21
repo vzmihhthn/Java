@@ -45,7 +45,7 @@ public class PhongbanDAO {
             while (rs.next()) 
             {
                 
-                phongbanDAO.add(new PhongBanDTO(rs.getString("MaPB"), rs.getString("TenPB"), rs.getString("SoDienThoai")));
+                phongbanDAO.add(new PhongBanDTO(rs.getString("MaPB").trim(), rs.getString("TenPB").trim(), rs.getString("SoDienThoai").trim()));
             }
             return phongbanDAO;
         } catch (SQLException e) {

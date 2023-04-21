@@ -5,7 +5,7 @@
 package BUS;
 
 import DAO.*;
-import DTO.BaohiemDTO;
+import DTO.BaoHiemDTO;
 import java.util.ArrayList;
 import Exception.*;
 
@@ -19,14 +19,14 @@ public class BaoHiemBUS {
     {
         
     }
-    public ArrayList<BaohiemDTO> getBaohiem()
+    public ArrayList<BaoHiemDTO> getBaohiem()
     {
         return baohiemdao.getBaohiem();
     }
-    public boolean addBaohiem(BaohiemDTO baohiem) throws DuplicatedException 
+    public boolean addBaohiem(BaoHiemDTO baohiem) throws DuplicatedException 
     {
-        ArrayList<BaohiemDTO> list = baohiemdao.getBaohiem();
-        for (BaohiemDTO item : list )
+        ArrayList<BaoHiemDTO> list = baohiemdao.getBaohiem();
+        for (BaoHiemDTO item : list )
         {
             if(item.getMaBH().equals(baohiem.getMaBH()))
             {

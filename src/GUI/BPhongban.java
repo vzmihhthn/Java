@@ -73,7 +73,8 @@ public class BPhongban extends javax.swing.JPanel {
      public void setPBData(ArrayList<PhongBanDTO> departments)
      {
             for (PhongBanDTO department : departments) {
-                defaultTableModel.addRow(new Object[]{
+                defaultTableModel.addRow(new Object[]
+                {
                     department.getMaPB(),
                     department.getTenPB(),
                     department.getSoDienThoai()
@@ -128,17 +129,23 @@ public class BPhongban extends javax.swing.JPanel {
         jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel25.setText("Tên Phòng Ban");
 
+        MaPB.setBackground(new java.awt.Color(255, 255, 255));
         MaPB.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        MaPB.setForeground(new java.awt.Color(0, 0, 0));
         MaPB.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
+        TenPB.setBackground(new java.awt.Color(255, 255, 255));
         TenPB.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        TenPB.setForeground(new java.awt.Color(0, 0, 0));
         TenPB.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
 
         jLabel26.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel26.setText("Số Điện Thoại");
 
+        SoDT.setBackground(new java.awt.Color(255, 255, 255));
         SoDT.setFont(new java.awt.Font("Segoe UI", 0, 15)); // NOI18N
+        SoDT.setForeground(new java.awt.Color(0, 0, 0));
         SoDT.setHorizontalAlignment(javax.swing.JTextField.RIGHT);
         SoDT.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -202,7 +209,9 @@ public class BPhongban extends javax.swing.JPanel {
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel30.setText("Xóa");
 
+        tablePhongban.setBackground(new java.awt.Color(255, 255, 255));
         tablePhongban.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        tablePhongban.setForeground(new java.awt.Color(0, 0, 0));
         tablePhongban.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -254,14 +263,13 @@ public class BPhongban extends javax.swing.JPanel {
                         .addComponent(MaPB, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 0, Short.MAX_VALUE))))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BangPhongbanLayout.createSequentialGroup()
-                .addContainerGap(43, Short.MAX_VALUE)
-                .addGroup(BangPhongbanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BangPhongbanLayout.createSequentialGroup()
-                        .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(560, 560, 560))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BangPhongbanLayout.createSequentialGroup()
-                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 1113, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(25, 25, 25))))
+                .addContainerGap(525, Short.MAX_VALUE)
+                .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(560, 560, 560))
+            .addGroup(BangPhongbanLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jScrollPane5)
+                .addContainerGap())
         );
         BangPhongbanLayout.setVerticalGroup(
             BangPhongbanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -301,16 +309,16 @@ public class BPhongban extends javax.swing.JPanel {
                                 .addGroup(BangPhongbanLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel27)
                                     .addComponent(jLabel28))))))
-                .addGap(33, 33, 33)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 111, Short.MAX_VALUE)
                 .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(52, Short.MAX_VALUE))
+                .addGap(35, 35, 35))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1195, Short.MAX_VALUE)
+            .addGap(0, 1259, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
@@ -319,12 +327,12 @@ public class BPhongban extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 539, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
                     .addContainerGap()
-                    .addComponent(BangPhongban, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addComponent(BangPhongban, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -381,7 +389,7 @@ public class BPhongban extends javax.swing.JPanel {
 
     private void ThembtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ThembtActionPerformed
         if ("".equals(MaPB.getText()) ||
-                "".equals(TenPB.getText())) {
+                "".trim().equals(TenPB.getText())) {
                 JOptionPane.showMessageDialog(this, 
                         "Không được bỏ trống dữ liệu nhập vào !!!", "Lỗi", 
                         JOptionPane.ERROR_MESSAGE);

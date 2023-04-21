@@ -28,7 +28,7 @@ public class PhongBanBUS {
     ArrayList<PhongBanDTO> list = phongbandao.getPhongBan();
 
     for (PhongBanDTO item : list) {
-        if (item.getMaPB().equals(phongban.getMaPB())) {
+        if (item.getMaPB().trim().equals(phongban.getMaPB().trim())) {
             throw new DuplicatedException("Mã phòng ban bị trùng");
         }
     }

@@ -27,7 +27,9 @@ public class NhanvienDTO {
     {
 
     }
-    public NhanvienDTO(String MaNv, String TenNv, String Gioitinh, String Diachi, String Email, String Sodienthoai, Date Ngayvaolam, String MaCv, String SoCMND, String MaPB, String MaDA) {
+    public NhanvienDTO(String MaNv, String TenNv, String Gioitinh, 
+            String Diachi, String Email, String Sodienthoai, 
+            Date Ngayvaolam, String MaCv, String SoCMND, String MaPB, String MaDA) {
         this.MaNv = MaNv;
         this.TenNv = TenNv;
         this.Gioitinh = Gioitinh;
