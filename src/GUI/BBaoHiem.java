@@ -57,17 +57,37 @@ public class BBaoHiem extends javax.swing.JPanel {
         
         tableBaohiem.addMouseListener(new MouseAdapter()
         {
-        public void mouseClicked(MouseEvent e) 
+                public void mouseClicked(MouseEvent e) 
         {
             int row = tableBaohiem.getSelectedRow();
-            if (row >= 0) {
-                String MaBH = tableBaohiem.getValueAt(row, 0).toString();
-                String MaNv = tableBaohiem.getValueAt(row, 1).toString();
-               String TenNv = tableBaohiem.getValueAt(row, 2).toString();
-               String LoaiBH = tableBaohiem.getValueAt(row, 3).toString();
-                String Ngcap = tableBaohiem.getValueAt(row, 4).toString();
-                String Nghethan = tableBaohiem.getValueAt(row, 5).toString();
-                
+            if (row >= 0) 
+            {
+                String MaBH = "";
+                String MaNv = "";
+                String TenNv = "";
+                String LoaiBH = "";
+                String Ngcap = "";
+                String Nghethan = "";
+
+                if (tableBaohiem.getValueAt(row, 0) != null) {
+                    MaBH = tableBaohiem.getValueAt(row, 0).toString();
+                }
+                if (tableBaohiem.getValueAt(row, 1) != null) {
+                    MaNv = tableBaohiem.getValueAt(row, 1).toString();
+                }
+                if (tableBaohiem.getValueAt(row, 2) != null) {
+                    TenNv = tableBaohiem.getValueAt(row, 2).toString();
+                }
+                if (tableBaohiem.getValueAt(row, 3) != null) {
+                    LoaiBH = tableBaohiem.getValueAt(row, 3).toString();
+                }
+                if (tableBaohiem.getValueAt(row, 4) != null) {
+                    Ngcap = tableBaohiem.getValueAt(row, 4).toString();
+                }
+                if (tableBaohiem.getValueAt(row, 5) != null) {
+                    Nghethan = tableBaohiem.getValueAt(row, 5).toString();
+                }
+
                 MaBhf.setText(MaBH);
                 MaNvf.setText(MaNv);
                 TenNvf.setText(TenNv);
@@ -75,7 +95,8 @@ public class BBaoHiem extends javax.swing.JPanel {
                 Ngaycapf.setText(Ngcap);
                 Ngayhethanf.setText(Nghethan);
             }
-        }
+}
+
             });
     }
      public void setBaohiemData(ArrayList<BaoHiemDTO> bbaohiem)
@@ -235,6 +256,7 @@ public class BBaoHiem extends javax.swing.JPanel {
         jLabel48.setText("Ngày hết hạn");
 
         tableBaohiem.setBackground(new java.awt.Color(255, 255, 255));
+        tableBaohiem.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tableBaohiem.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         tableBaohiem.setForeground(new java.awt.Color(0, 0, 0));
         tableBaohiem.setModel(new javax.swing.table.DefaultTableModel(
@@ -376,7 +398,7 @@ public class BBaoHiem extends javax.swing.JPanel {
                             .addComponent(jLabel46))))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, 234, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(99, Short.MAX_VALUE))
+                .addContainerGap(34, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);

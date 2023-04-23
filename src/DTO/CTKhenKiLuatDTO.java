@@ -10,18 +10,18 @@ import java.util.Date;
  *
  * @author MI
  */
-public class KhenThuongKiLuatDTO {
+public class CTKhenKiLuatDTO {
     private String MaKTKL;
     private String MaNv;
     private double Sotien;
     private Date Ngayquyetdinh;
     private String Hinhthuc;
     private String Noidung;
-    public KhenThuongKiLuatDTO()
+    public CTKhenKiLuatDTO()
     {
         
     }
-    public KhenThuongKiLuatDTO(String MaKTKL, String MaNv, double Sotien, Date Ngayquyetdinh, String Hinhthuc, String Noidung) {
+    public CTKhenKiLuatDTO(String MaKTKL, String MaNv, double Sotien, Date Ngayquyetdinh, String Hinhthuc, String Noidung) {
         this.MaKTKL = MaKTKL;
         this.MaNv = MaNv;
         this.Sotien = Sotien;

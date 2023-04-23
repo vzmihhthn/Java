@@ -23,7 +23,7 @@ public class Connect {
          Connection conn = null;
          try {
             Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-            String url = "jdbc:sqlserver://localhost:1433;databaseName=Java_QLNS;encrypt=false";
+            String url = "jdbc:sqlserver://localhost:1433;databaseName=QLNS;encrypt=false";
             String user = "sa";
             String pass = "1234567";
             conn = DriverManager.getConnection(url,user,pass);

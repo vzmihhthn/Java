@@ -90,7 +90,7 @@
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                           </Group>
-                          <Component id="jPanel3" alignment="0" pref="1282" max="32767" attributes="0"/>
+                          <Component id="jPanel3" alignment="0" pref="1294" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
@@ -347,29 +347,34 @@
                       <EmptySpace min="-2" pref="270" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="Phongban" pref="75" max="32767" attributes="0"/>
-                          <Component id="IconPhongban" max="32767" attributes="0"/>
+                          <Component id="pbanbt" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="IconNhanvien" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
+                          <Component id="nhanvienbt" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                           <Component id="Nhanvien" alignment="0" min="-2" pref="75" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="IconChucvu" pref="80" max="32767" attributes="0"/>
+                          <Component id="chucvubt" pref="80" max="32767" attributes="0"/>
                           <Component id="Chucvu" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="Bangluong" max="32767" attributes="0"/>
-                          <Component id="IconBangluong" max="32767" attributes="0"/>
+                          <Component id="luongbt" max="32767" attributes="0"/>
                       </Group>
                       <EmptySpace min="-2" pref="60" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
                           <Component id="Baohiem" pref="80" max="32767" attributes="0"/>
-                          <Component id="IconBaohiem" max="32767" attributes="0"/>
+                          <Component id="baohiembt" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="388" max="32767" attributes="0"/>
+                      <EmptySpace min="-2" pref="62" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="ktklbt" max="32767" attributes="0"/>
+                          <Component id="Baohiem1" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="246" max="-2" attributes="0"/>
                   </Group>
                   <Component id="hienthi" alignment="0" max="32767" attributes="0"/>
               </Group>
@@ -379,75 +384,81 @@
                   <Group type="102" attributes="0">
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="IconNhanvien" alignment="0" max="32767" attributes="0"/>
-                          <Component id="IconPhongban" alignment="0" max="32767" attributes="0"/>
-                          <Component id="IconBaohiem" alignment="0" max="32767" attributes="0"/>
-                          <Component id="IconBangluong" alignment="0" max="32767" attributes="0"/>
-                          <Component id="IconChucvu" alignment="0" max="32767" attributes="0"/>
+                          <Component id="nhanvienbt" alignment="0" max="32767" attributes="0"/>
+                          <Component id="pbanbt" alignment="0" max="32767" attributes="0"/>
+                          <Component id="baohiembt" alignment="0" max="32767" attributes="0"/>
+                          <Component id="luongbt" alignment="0" max="32767" attributes="0"/>
+                          <Component id="chucvubt" alignment="0" max="32767" attributes="0"/>
+                          <Component id="ktklbt" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="0" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="Phongban" max="32767" attributes="0"/>
-                          <Component id="Nhanvien" max="32767" attributes="0"/>
-                          <Component id="Chucvu" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="Bangluong" alignment="3" pref="34" max="32767" attributes="0"/>
-                              <Component id="Baohiem" alignment="3" pref="30" max="32767" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="Phongban" max="32767" attributes="0"/>
+                              <Component id="Nhanvien" max="32767" attributes="0"/>
+                              <Component id="Chucvu" max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="3" attributes="0">
+                                  <Component id="Bangluong" alignment="3" pref="34" max="32767" attributes="0"/>
+                                  <Component id="Baohiem" alignment="3" pref="30" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="Baohiem1" pref="29" max="32767" attributes="0"/>
                           </Group>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
-                      <Component id="hienthi" pref="543" max="32767" attributes="0"/>
+                      <Component id="hienthi" pref="542" max="32767" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
           </Layout>
           <SubComponents>
-            <Component class="javax.swing.JButton" name="IconPhongban">
+            <Component class="javax.swing.JButton" name="pbanbt">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Picture/Icojam-Blueberry-Basic-Home.32.png"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IconPhongbanActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pbanbtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="IconNhanvien">
+            <Component class="javax.swing.JButton" name="nhanvienbt">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Picture/Custom-Icon-Design-Mini-Users.48.png"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IconNhanvienActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="nhanvienbtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="IconChucvu">
+            <Component class="javax.swing.JButton" name="chucvubt">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Picture/xanh.png"/>
                 </Property>
               </Properties>
             </Component>
-            <Component class="javax.swing.JButton" name="IconBangluong">
+            <Component class="javax.swing.JButton" name="luongbt">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Picture/Aha-Soft-Large-Seo-SEO.64.png"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IconBangluongActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="luongbtActionPerformed"/>
               </Events>
             </Component>
-            <Component class="javax.swing.JButton" name="IconBaohiem">
+            <Component class="javax.swing.JButton" name="baohiembt">
               <Properties>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
                   <Image iconType="3" name="/Picture/Icons-Land-Buildings-Care.64.png"/>
                 </Property>
               </Properties>
               <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="IconBaohiemActionPerformed"/>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="baohiembtActionPerformed"/>
               </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="Phongban">
@@ -499,6 +510,25 @@
 
               <Layout class="org.netbeans.modules.form.compat2.layouts.DesignCardLayout"/>
             </Container>
+            <Component class="javax.swing.JButton" name="ktklbt">
+              <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="2" name="W:\Java\Java_QLNS\src\Picture\Emey87-Trainee-Badge-Prize.48.png"/>
+                </Property>
+              </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="ktklbtActionPerformed"/>
+              </Events>
+            </Component>
+            <Component class="javax.swing.JLabel" name="Baohiem1">
+              <Properties>
+                <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+                  <Font name="Segoe UI" size="14" style="1"/>
+                </Property>
+                <Property name="horizontalAlignment" type="int" value="0"/>
+                <Property name="text" type="java.lang.String" value="Khen - K&#x1ec9; Lu&#x1ead;t"/>
+              </Properties>
+            </Component>
           </SubComponents>
         </Container>
         <Container class="javax.swing.JPanel" name="jPanel4">

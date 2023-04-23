@@ -57,7 +57,8 @@ public class BChitietLuong extends javax.swing.JPanel
         public void mouseClicked(MouseEvent e) 
         {
             int row = tableLuong.getSelectedRow();
-            if (row >= 0) {
+            if (row >= 0) 
+            {
                 String Maluong = tableLuong.getValueAt(row, 0).toString();
                 String Tennv = tableLuong.getValueAt(row, 1).toString();
                String hsluong = tableLuong.getValueAt(row, 2).toString();
@@ -193,6 +194,7 @@ public class BChitietLuong extends javax.swing.JPanel
         jLabel34.setText("Tiền lương");
 
         tableLuong.setBackground(new java.awt.Color(255, 255, 255));
+        tableLuong.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         tableLuong.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
         tableLuong.setForeground(new java.awt.Color(0, 0, 0));
         tableLuong.setModel(new javax.swing.table.DefaultTableModel(
@@ -372,9 +374,9 @@ public class BChitietLuong extends javax.swing.JPanel
                     .addComponent(jLabel37)
                     .addComponent(jLabel38)
                     .addComponent(jLabel35))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 76, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
                 .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(25, 25, 25))
+                .addContainerGap(20, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -390,8 +392,8 @@ public class BChitietLuong extends javax.swing.JPanel
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addContainerGap())
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

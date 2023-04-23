@@ -22,9 +22,9 @@ public class Main extends javax.swing.JFrame {
     public static BNhanvien nhanvien = new BNhanvien();
     public  static BPhongban phongban = new BPhongban();
     public  static BChitietLuong ctluong = new BChitietLuong();
-    public static BLuong luong = new BLuong();
-        
-    
+    public  static BKhenKLuat khenkiluat = new BKhenKLuat();
+         
+   
         
         
     public Main() 
@@ -64,17 +64,19 @@ public class Main extends javax.swing.JFrame {
         jTextField16 = new javax.swing.JTextField();
         jLabel8 = new javax.swing.JLabel();
         Quanly = new javax.swing.JPanel();
-        IconPhongban = new javax.swing.JButton();
-        IconNhanvien = new javax.swing.JButton();
-        IconChucvu = new javax.swing.JButton();
-        IconBangluong = new javax.swing.JButton();
-        IconBaohiem = new javax.swing.JButton();
+        pbanbt = new javax.swing.JButton();
+        nhanvienbt = new javax.swing.JButton();
+        chucvubt = new javax.swing.JButton();
+        luongbt = new javax.swing.JButton();
+        baohiembt = new javax.swing.JButton();
         Phongban = new javax.swing.JLabel();
         Nhanvien = new javax.swing.JLabel();
         Chucvu = new javax.swing.JLabel();
         Bangluong = new javax.swing.JLabel();
         Baohiem = new javax.swing.JLabel();
         hienthi = new javax.swing.JPanel();
+        ktklbt = new javax.swing.JButton();
+        Baohiem1 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         jButton9 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
@@ -258,33 +260,33 @@ public class Main extends javax.swing.JFrame {
 
         QuanLyNhanSu.addTab("     Hệ Thống     ", HeThong);
 
-        IconPhongban.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/Icojam-Blueberry-Basic-Home.32.png"))); // NOI18N
-        IconPhongban.addActionListener(new java.awt.event.ActionListener() {
+        pbanbt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/Icojam-Blueberry-Basic-Home.32.png"))); // NOI18N
+        pbanbt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IconPhongbanActionPerformed(evt);
+                pbanbtActionPerformed(evt);
             }
         });
 
-        IconNhanvien.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/Custom-Icon-Design-Mini-Users.48.png"))); // NOI18N
-        IconNhanvien.addActionListener(new java.awt.event.ActionListener() {
+        nhanvienbt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/Custom-Icon-Design-Mini-Users.48.png"))); // NOI18N
+        nhanvienbt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IconNhanvienActionPerformed(evt);
+                nhanvienbtActionPerformed(evt);
             }
         });
 
-        IconChucvu.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/xanh.png"))); // NOI18N
+        chucvubt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/xanh.png"))); // NOI18N
 
-        IconBangluong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/Aha-Soft-Large-Seo-SEO.64.png"))); // NOI18N
-        IconBangluong.addActionListener(new java.awt.event.ActionListener() {
+        luongbt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/Aha-Soft-Large-Seo-SEO.64.png"))); // NOI18N
+        luongbt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IconBangluongActionPerformed(evt);
+                luongbtActionPerformed(evt);
             }
         });
 
-        IconBaohiem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/Icons-Land-Buildings-Care.64.png"))); // NOI18N
-        IconBaohiem.addActionListener(new java.awt.event.ActionListener() {
+        baohiembt.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Picture/Icons-Land-Buildings-Care.64.png"))); // NOI18N
+        baohiembt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                IconBaohiemActionPerformed(evt);
+                baohiembtActionPerformed(evt);
             }
         });
 
@@ -310,6 +312,17 @@ public class Main extends javax.swing.JFrame {
 
         hienthi.setLayout(new java.awt.CardLayout());
 
+        ktklbt.setIcon(new javax.swing.ImageIcon("W:\\Java\\Java_QLNS\\src\\Picture\\Emey87-Trainee-Badge-Prize.48.png")); // NOI18N
+        ktklbt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ktklbtActionPerformed(evt);
+            }
+        });
+
+        Baohiem1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Baohiem1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        Baohiem1.setText("Khen - Kỉ Luật");
+
         javax.swing.GroupLayout QuanlyLayout = new javax.swing.GroupLayout(Quanly);
         Quanly.setLayout(QuanlyLayout);
         QuanlyLayout.setHorizontalGroup(
@@ -318,24 +331,28 @@ public class Main extends javax.swing.JFrame {
                 .addGap(270, 270, 270)
                 .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Phongban, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
-                    .addComponent(IconPhongban, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(pbanbt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(60, 60, 60)
                 .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(IconNhanvien, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(nhanvienbt, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(Nhanvien, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(60, 60, 60)
                 .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(IconChucvu, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
+                    .addComponent(chucvubt, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
                     .addComponent(Chucvu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(60, 60, 60)
                 .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Bangluong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(IconBangluong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(luongbt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(60, 60, 60)
                 .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(Baohiem, javax.swing.GroupLayout.DEFAULT_SIZE, 80, Short.MAX_VALUE)
-                    .addComponent(IconBaohiem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(388, Short.MAX_VALUE))
+                    .addComponent(baohiembt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(62, 62, 62)
+                .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ktklbt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Baohiem1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(246, 246, 246))
             .addComponent(hienthi, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         QuanlyLayout.setVerticalGroup(
@@ -343,21 +360,25 @@ public class Main extends javax.swing.JFrame {
             .addGroup(QuanlyLayout.createSequentialGroup()
                 .addGap(20, 20, 20)
                 .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(IconNhanvien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(IconPhongban, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(IconBaohiem, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(IconBangluong, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(IconChucvu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(0, 0, 0)
-                .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(Phongban, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Nhanvien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(Chucvu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(Bangluong, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
-                        .addComponent(Baohiem, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)))
+                    .addComponent(nhanvienbt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(pbanbt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(baohiembt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(luongbt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(chucvubt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(ktklbt, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(Phongban, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Nhanvien, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Chucvu, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(QuanlyLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(Bangluong, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                            .addComponent(Baohiem, javax.swing.GroupLayout.DEFAULT_SIZE, 30, Short.MAX_VALUE)))
+                    .addGroup(QuanlyLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Baohiem1, javax.swing.GroupLayout.DEFAULT_SIZE, 29, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(hienthi, javax.swing.GroupLayout.DEFAULT_SIZE, 543, Short.MAX_VALUE)
+                .addComponent(hienthi, javax.swing.GroupLayout.DEFAULT_SIZE, 542, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
@@ -713,24 +734,24 @@ public class Main extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void IconBangluongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IconBangluongActionPerformed
+    private void luongbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_luongbtActionPerformed
         // TODO add your handling code here:
             hienthi.add(ctluong, "BChitietLuong");
         CardLayout cardLayout = (CardLayout) hienthi.getLayout();
         cardLayout.show(hienthi, "BChitietLuong");
 
-    }//GEN-LAST:event_IconBangluongActionPerformed
+    }//GEN-LAST:event_luongbtActionPerformed
 
-    private void IconNhanvienActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IconNhanvienActionPerformed
+    private void nhanvienbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nhanvienbtActionPerformed
         // TODO add your handling code here:
     hienthi.add(nhanvien, "BNhanvien");
         CardLayout cardLayout = (CardLayout) hienthi.getLayout();
         cardLayout.show(hienthi, "BNhanvien");
 
 
-    }//GEN-LAST:event_IconNhanvienActionPerformed
+    }//GEN-LAST:event_nhanvienbtActionPerformed
 
-    private void IconPhongbanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IconPhongbanActionPerformed
+    private void pbanbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pbanbtActionPerformed
         // TODO add your handling code here:
             hienthi.add(phongban, "BPhongban");
         CardLayout cardLayout = (CardLayout) hienthi.getLayout();
@@ -741,7 +762,7 @@ public class Main extends javax.swing.JFrame {
         
 
 
-    }//GEN-LAST:event_IconPhongbanActionPerformed
+    }//GEN-LAST:event_pbanbtActionPerformed
 
     private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
         // TODO add your handling code here:
@@ -789,7 +810,7 @@ public class Main extends javax.swing.JFrame {
         DsThkeLuong.setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
-    private void IconBaohiemActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_IconBaohiemActionPerformed
+    private void baohiembtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_baohiembtActionPerformed
         // TODO add your handling code here:
         
     hienthi.add(baoHiem, "BBaoHiem");  
@@ -797,7 +818,14 @@ public class Main extends javax.swing.JFrame {
     cardLayout.show(hienthi, "BBaoHiem");   
        
         
-    }//GEN-LAST:event_IconBaohiemActionPerformed
+    }//GEN-LAST:event_baohiembtActionPerformed
+
+    private void ktklbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ktklbtActionPerformed
+        // TODO add your handling code here:
+            hienthi.add(khenkiluat, "BKhenKiLuat");  
+    CardLayout cardLayout = (CardLayout) hienthi.getLayout();
+    cardLayout.show(hienthi, "BKhenKiLuat");
+    }//GEN-LAST:event_ktklbtActionPerformed
 
     /**
      * @param args the command line arguments
@@ -838,6 +866,7 @@ public class Main extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel Bangluong;
     private javax.swing.JLabel Baohiem;
+    private javax.swing.JLabel Baohiem1;
     private javax.swing.JLabel Chucvu;
     private javax.swing.JLabel Dangxuat;
     private javax.swing.JLabel Doimk;
@@ -845,19 +874,16 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JPanel DsThkeNhvien;
     private javax.swing.ButtonGroup Gtinh;
     private javax.swing.JPanel HeThong;
-    private javax.swing.JButton IconBangluong;
-    private javax.swing.JButton IconBaohiem;
-    private javax.swing.JButton IconChucvu;
     private javax.swing.JButton IconDangxuat;
     private javax.swing.JButton IconDoimk;
-    private javax.swing.JButton IconNhanvien;
-    private javax.swing.JButton IconPhongban;
     private javax.swing.JButton IconThoat;
     private javax.swing.JLabel Nhanvien;
     private javax.swing.JLabel Phongban;
     private javax.swing.JTabbedPane QuanLyNhanSu;
     private javax.swing.JPanel Quanly;
     private javax.swing.JLabel Thoat;
+    private javax.swing.JButton baohiembt;
+    private javax.swing.JButton chucvubt;
     private javax.swing.JPanel hienthi;
     private javax.swing.JButton jButton12;
     private javax.swing.JButton jButton15;
@@ -897,5 +923,9 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField7;
+    private javax.swing.JButton ktklbt;
+    private javax.swing.JButton luongbt;
+    private javax.swing.JButton nhanvienbt;
+    private javax.swing.JButton pbanbt;
     // End of variables declaration//GEN-END:variables
 }
