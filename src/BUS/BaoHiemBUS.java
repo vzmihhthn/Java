@@ -14,7 +14,7 @@ import Exception.*;
  * @author MI
  */
 public class BaoHiemBUS {
-    BaohiemDAO baohiemdao = new BaohiemDAO();
+    BaoHiemDAO baohiemdao = new BaoHiemDAO();
     public  BaoHiemBUS()
     {
         
