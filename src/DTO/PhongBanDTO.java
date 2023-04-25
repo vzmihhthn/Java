@@ -31,7 +31,7 @@ public class PhongBanDTO {
     public void setMaPB(String MaPB) {
         this.MaPB = MaPB;
     }
-
+    
     public String getTenPB() {
         return TenPB;
     }
@@ -63,6 +63,7 @@ public Object[] getSelection()
     Object[] result2 = result.toArray();
     return result2;
 }
+    
 //    public Object[] getSelection() 
 //    {
 //        ArrayList<Boolean> result = new ArrayList();
@@ -72,6 +73,11 @@ public Object[] getSelection()
 //        
 //        return result2;
 //    }
+
+    @Override
+    public String toString() {
+        return TenPB; 
+    }
 
     
     

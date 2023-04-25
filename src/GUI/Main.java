@@ -23,7 +23,8 @@ public class Main extends javax.swing.JFrame {
     public  static BPhongban phongban = new BPhongban();
     public  static BChitietLuong ctluong = new BChitietLuong();
     public  static BKhenKLuat khenkiluat = new BKhenKLuat();
-         
+    public static BCTKhenKiLuat ctkhenkiluat = new BCTKhenKiLuat();
+    
    
         
         
@@ -744,9 +745,12 @@ public class Main extends javax.swing.JFrame {
 
     private void nhanvienbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nhanvienbtActionPerformed
         // TODO add your handling code here:
+        
     hienthi.add(nhanvien, "BNhanvien");
         CardLayout cardLayout = (CardLayout) hienthi.getLayout();
         cardLayout.show(hienthi, "BNhanvien");
+        nhanvien.setdatacombophban();
+        
 
 
     }//GEN-LAST:event_nhanvienbtActionPerformed
@@ -819,12 +823,14 @@ public class Main extends javax.swing.JFrame {
        
         
     }//GEN-LAST:event_baohiembtActionPerformed
-
+  
     private void ktklbtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ktklbtActionPerformed
         // TODO add your handling code here:
-            hienthi.add(khenkiluat, "BKhenKiLuat");  
+    hienthi.add(ctkhenkiluat, "BCTKhenKiLuat");
     CardLayout cardLayout = (CardLayout) hienthi.getLayout();
-    cardLayout.show(hienthi, "BKhenKiLuat");
+    cardLayout.show(hienthi, "BCTKhenKiLuat");
+
+
     }//GEN-LAST:event_ktklbtActionPerformed
 
     /**

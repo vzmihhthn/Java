@@ -10,10 +10,12 @@ import java.util.Date;
  *
  * @author MI
  */
-public class CTKhenKiLuatDTO {
+public class CTKhenKiLuatDTO 
+{
     private String MaKTKL;
     private String MaNv;
-    private double Sotien;
+    private String Tennvct;
+    private float Sotien;
     private Date Ngayquyetdinh;
     private String Hinhthuc;
     private String Noidung;
@@ -21,9 +23,11 @@ public class CTKhenKiLuatDTO {
     {
         
     }
-    public CTKhenKiLuatDTO(String MaKTKL, String MaNv, double Sotien, Date Ngayquyetdinh, String Hinhthuc, String Noidung) {
+
+    public CTKhenKiLuatDTO(String MaKTKL, String MaNv, String Tennvct, float Sotien, Date Ngayquyetdinh, String Hinhthuc, String Noidung) {
         this.MaKTKL = MaKTKL;
         this.MaNv = MaNv;
+        this.Tennvct = Tennvct;
         this.Sotien = Sotien;
         this.Ngayquyetdinh = Ngayquyetdinh;
         this.Hinhthuc = Hinhthuc;
@@ -46,11 +50,19 @@ public class CTKhenKiLuatDTO {
         this.MaNv = MaNv;
     }
 
-    public double getSotien() {
+    public String getTennvct() {
+        return Tennvct;
+    }
+
+    public void setTennvct(String Tennvct) {
+        this.Tennvct = Tennvct;
+    }
+
+    public float getSotien() {
         return Sotien;
     }
 
-    public void setSotien(double Sotien) {
+    public void setSotien(float Sotien) {
         this.Sotien = Sotien;
     }
 
@@ -77,6 +89,7 @@ public class CTKhenKiLuatDTO {
     public void setNoidung(String Noidung) {
         this.Noidung = Noidung;
     }
-    
+
+   
     
 }

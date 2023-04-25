@@ -89,7 +89,7 @@
                               <Component id="Ngaycapf" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
                               <Component id="Ngayhethanf" alignment="0" min="-2" pref="167" max="-2" attributes="0"/>
                           </Group>
-                          <EmptySpace pref="96" max="32767" attributes="0"/>
+                          <EmptySpace pref="159" max="32767" attributes="0"/>
                       </Group>
                   </Group>
                   <EmptySpace min="-2" pref="57" max="-2" attributes="0"/>

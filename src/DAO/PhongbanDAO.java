@@ -38,7 +38,7 @@ public class PhongbanDAO {
     public ArrayList<PhongBanDTO> getPhongBan() {
         try {
             conn = DBConnection.getConnection();
-            stmt = conn.prepareStatement("SELECT * FROM phongban");
+            stmt = conn.prepareStatement("SELECT * FROM PhongBan");
             ArrayList<PhongBanDTO> phongbanDAO = new ArrayList();
 
             rs = stmt.executeQuery();
@@ -88,11 +88,13 @@ public class PhongbanDAO {
             stmt.setString(1, phongban.getMaPB());
             stmt.setString(2, phongban.getTenPB());
             stmt.setString(3, phongban.getSoDienThoai());
+            
             stmt.executeUpdate();
 
             return true;
 
         } catch (SQLException e) {
+            System.err.println("Lỗi khi thêm phòng ban: " + e.getMessage());
             return false;
         } finally {
             DBConnection.closeConnection(conn, stmt);
