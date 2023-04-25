@@ -4,38 +4,46 @@
  */
 package DTO;
 
-import java.util.Date;
-
 /**
  *
  * @author MI
  */
-public class BangluongDTO {
-    private String MaNv;
+public class BangLuongDTO {
+     private String MaNv;
     private String MaLuong;
     private String TenNv;
-    private double LuongCoBan;
-    private double HeSoluong;
-    private double ThuongPhat;
-    private double TienLuong;
-    private double TienPhuCap;
+    private float LuongCoBan;
+    private float HeSoluong;
+    private float ThuongPhat;
+    private float TienLuong;
+    private float TienPhuCap;
     
-    public  BangluongDTO()
+    public  BangLuongDTO()
     {
         
     }
-    public BangluongDTO(String MaNv,String MaLuong,String TenNv,double LuongCoBan,double HeSoluong,
-                        double ThuongPhat,double TienLuong,double TienPhuCap)
-    {
-        this.MaNv= MaNv;
-        this.MaLuong= MaLuong;
-        this.TenNv=TenNv;
-        this.LuongCoBan=LuongCoBan;
-        this.HeSoluong=HeSoluong;
-        this.ThuongPhat= ThuongPhat;
-        this.TienLuong=TienLuong;
-        this.TienPhuCap=TienPhuCap;
+
+    public BangLuongDTO(String MaNv, String MaLuong, String TenNv, float LuongCoBan, float HeSoluong, float ThuongPhat, float TienLuong, float TienPhuCap) {
+        this.MaNv = MaNv;
+        this.MaLuong = MaLuong;
+        this.TenNv = TenNv;
+        this.LuongCoBan = LuongCoBan;
+        this.HeSoluong = HeSoluong;
+        this.ThuongPhat = ThuongPhat;
+        this.TienLuong = TienLuong;
+        this.TienPhuCap = TienPhuCap;
     }
+
+    public BangLuongDTO(String MaLuong, String TenNv, float LuongCoBan, float HeSoluong, float ThuongPhat, float TienLuong, float TienPhuCap) {
+        this.MaLuong = MaLuong;
+        this.TenNv = TenNv;
+        this.LuongCoBan = LuongCoBan;
+        this.HeSoluong = HeSoluong;
+        this.ThuongPhat = ThuongPhat;
+        this.TienLuong = TienLuong;
+        this.TienPhuCap = TienPhuCap;
+    }
+
     public String getMaNv() {
         return MaNv;
     }
@@ -60,46 +68,44 @@ public class BangluongDTO {
         this.TenNv = TenNv;
     }
 
-    public double getLuongCoBan() {
+    public float getLuongCoBan() {
         return LuongCoBan;
     }
 
-    public void setLuongCoBan(double LuongCoBan) {
+    public void setLuongCoBan(float LuongCoBan) {
         this.LuongCoBan = LuongCoBan;
     }
 
-    public double getHeSoluong() {
+    public float getHeSoluong() {
         return HeSoluong;
     }
 
-    public void setHeSoluong(double HeSoluong) {
+    public void setHeSoluong(float HeSoluong) {
         this.HeSoluong = HeSoluong;
     }
 
-    public double getThuongPhat() {
+    public float getThuongPhat() {
         return ThuongPhat;
     }
 
-    public void setThuongPhat(double ThuongPhat) {
+    public void setThuongPhat(float ThuongPhat) {
         this.ThuongPhat = ThuongPhat;
     }
 
-    public double getTienLuong() {
+    public float getTienLuong() {
         return TienLuong;
     }
 
-    public void setTienLuong(double TienLuong) {
+    public void setTienLuong(float TienLuong) {
         this.TienLuong = TienLuong;
     }
 
-    public double getTienPhuCap() {
+    public float getTienPhuCap() {
         return TienPhuCap;
     }
 
-    public void setTienPhuCap(double TienPhuCap) {
+    public void setTienPhuCap(float TienPhuCap) {
         this.TienPhuCap = TienPhuCap;
     }
-    
-    
     
 }

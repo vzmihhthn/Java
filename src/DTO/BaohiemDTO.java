@@ -13,8 +13,8 @@ import java.util.Date;
  *
  * @author MI
  */
-public class BaohiemDTO
-{
+public class BaoHiemDTO {
+ 
     private String MaBH;
     private String MaNv;
     private String TenNvbh;
@@ -22,12 +22,10 @@ public class BaohiemDTO
     private Date Ngaycap;
     private Date Ngayhethan;
     
-        public BaohiemDTO()
-    {
-        
-    }
-
-    public BaohiemDTO(String MaBH, String MaNv, String TenNvbh, String LoaiBH, Date Ngaycap, Date Ngayhethan) {
+    public  BaoHiemDTO()
+            {
+            }
+    public BaoHiemDTO(String MaBH, String MaNv, String TenNvbh, String LoaiBH, Date Ngaycap, Date Ngayhethan) {
         this.MaBH = MaBH;
         this.MaNv = MaNv;
         this.TenNvbh = TenNvbh;
@@ -35,19 +33,6 @@ public class BaohiemDTO
         this.Ngaycap = Ngaycap;
         this.Ngayhethan = Ngayhethan;
     }
-
-    
-    public String getTenNvbh() {
-        return TenNvbh;
-    }
-
-    public void setTenNvbh(String TenNvbh) {
-        this.TenNvbh = TenNvbh;
-    }
-
-
-    
-
 
     public String getMaBH() {
         return MaBH;
@@ -65,6 +50,14 @@ public class BaohiemDTO
         this.MaNv = MaNv;
     }
 
+    public String getTenNvbh() {
+        return TenNvbh;
+    }
+
+    public void setTenNvbh(String TenNvbh) {
+        this.TenNvbh = TenNvbh;
+    }
+
     public String getLoaiBH() {
         return LoaiBH;
     }
@@ -73,22 +66,30 @@ public class BaohiemDTO
         this.LoaiBH = LoaiBH;
     }
 
-        public Date getNgaycap() {
-            return Ngaycap;
-        }
+    public Date getNgaycap() {
+        return Ngaycap;
+    }
 
-        public void setNgaycap(Date Ngaycap) {
-            this.Ngaycap = Ngaycap;
-        }
+    public void setNgaycap(Date Ngaycap) {
+        this.Ngaycap = Ngaycap;
+    }
 
-        public Date getNgayhethan() {
-            return Ngayhethan;
-        }
+    public Date getNgayhethan() {
+        return Ngayhethan;
+    }
 
-        public void setNgayhethan(Date Ngayhethan) {
-            this.Ngayhethan = Ngayhethan;
-        }
+    public void setNgayhethan(Date Ngayhethan) {
+        this.Ngayhethan = Ngayhethan;
+    }
     
+
+
+    
+
+
+    
+
+
     public Object[] getSelection() 
 {
     ArrayList<Boolean> result = new ArrayList();
@@ -124,3 +125,5 @@ public class BaohiemDTO
         return result2;
 }
 }
+
+

@@ -17,7 +17,7 @@ import java.util.ArrayList;
  *
  * @author MI
  */
-public class BaohiemDAO
+public class BaoHiemDAO
 {
     Connection conn = null;
     PreparedStatement stmt = null;
@@ -25,11 +25,11 @@ public class BaohiemDAO
     
     public static final String INDEX_LOAIBH = null;
     
-    public BaohiemDAO()
+    public BaoHiemDAO()
     {
     }
     public static void main(String[] args) {
-        BaohiemDAO baohiemDAO = new BaohiemDAO();
+        BaoHiemDAO baohiemDAO = new BaoHiemDAO();
         ArrayList<BaoHiemDTO> baohiemList = baohiemDAO.getBaohiem();
         for (BaoHiemDTO pb : baohiemList)
         {
